@@ -1,0 +1,8 @@
+This is a sample example of Column range chart with Highcharts library. (http://www.highcharts.com)
+
+We might have a business requirement to identify the overlap of the user requests along
+the timeline of the application usage. The example provided has fake data. But data such as
+request start time, duration, user and type of request can be recorded in some database table and
+in real case, the range [start time, end time] can be used while plotting the graph.
+
+Please also refer demo @http://www.highcharts.com/demo/columnrange

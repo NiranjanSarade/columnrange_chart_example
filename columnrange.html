@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>ColumnRange Chart Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>	
+<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script type="text/javascript">
+
+$(function () {
+    var chart;
+    $(document).ready(function() {
+        chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'columnrange',
+		inverted: true
+            },
+            title: {
+                text: 'Application Usage'
+            },
+            subtitle: {
+                text: 'Source: Some DB table where requests from users are recorded'
+            },
+            xAxis: {
+                categories: [
+                    'Request Type 1',
+		    'Request Type 2',
+	            'Request Type 3',
+		    'Request Type 4',
+		    'Request Type 5',
+		    'Request Type 6'
+                ]
+            },
+            yAxis: {
+                    title: {
+                    text: 'TimeLine'
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                backgroundColor: '#FFFFFF',
+                align: 'left',
+                verticalAlign: 'top',
+                x: 100,
+                y: 70,
+                floating: true,
+                shadow: true
+            },
+            tooltip: {
+                    valueSuffix: ' secs'
+            },
+            series: [{
+                name: 'User1',
+                data: [[10,20],[30,40],[50,30],[25,70],[45,70],[50,90]]
+    
+            },
+           {
+                name: 'User2',
+                data: [[30,60],[20,90],[40,50],[10,90]]
+    
+            },
+	    {
+                name: 'User3',
+                data: [[20,80],[30,88],[50,70],[25,70],[40,50],[60,90]]
+    
+            },
+	   {
+                name: 'User4',
+                data: [[10,20],[30,40],[50,80],[25,70],[48,90]]
+    
+            },
+           {
+                name: 'User5',
+                data: [[45,80],[40,70],[50,85],[25,70],[10,90]]
+    
+            }]
+        });
+    });
+    
+});	
+</script>
+</body>
+</html>
+
